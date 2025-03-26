@@ -28,13 +28,6 @@ const menu = () => {
     ]),
   ];
 
-  console.log(bgs[0].pos, bgs[1].pos);
-
-  setInterval(() => {
-    console.log(bgs[0].pos, bgs[1].pos);
-  }
-  , 1000);
-
   // add platforms
   const platforms = [
     k.add([k.sprite("platform"), k.pos(0, 400), k.scale(3)]),
