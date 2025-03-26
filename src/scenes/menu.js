@@ -28,6 +28,13 @@ const menu = () => {
     ]),
   ];
 
+  console.log(bgs[0].pos, bgs[1].pos);
+
+  setInterval(() => {
+    console.log(bgs[0].pos, bgs[1].pos);
+  }
+  , 1000);
+
   // add platforms
   const platforms = [
     k.add([k.sprite("platform"), k.pos(0, 400), k.scale(3)]),
@@ -72,7 +79,7 @@ const menu = () => {
   k.onUpdate(() => {
     // if bgs[1] is out of screen
     if (bgs[1].pos.x < 0) {
-      bgs[0].moveTo(bgs[1].pos.x + bgWidth * 1.2, 0);
+      bgs[0].moveTo(bgs[1].pos.x + bgWidth * 1.2, -60);
       const temp = bgs[0];
       bgs[0] = bgs[1];
       bgs[1] = temp;
@@ -89,7 +96,7 @@ const menu = () => {
     // move bg
     bgs[0].move(-150, 0);
     // bgs[1].move(-400, 0);
-    bgs[1].moveTo(bgs[0].pos.x + bgWidth * 1.2, 0);
+    bgs[1].moveTo(bgs[0].pos.x + bgWidth * 1.2, bgs[0].pos.y);
 
     // move platforms
     platforms[0].move(-1200, 0);

@@ -134,7 +134,7 @@ const gameScene = (sfx) => {
   k.onUpdate(() => {
     // if bgs[1] is out of screen
     if (bgs[1].pos.x < 0) {
-      bgs[0].moveTo(bgs[1].pos.x + bgWidth * 1.2, 0);
+      bgs[0].moveTo(bgs[1].pos.x + bgWidth * 1.2, -60);
       const temp = bgs[0];
       bgs[0] = bgs[1];
       bgs[1] = temp;
@@ -151,7 +151,7 @@ const gameScene = (sfx) => {
     // move bg
     // bgs[1].move(-400, 0);
     bgs[0].move(-150, 0);
-    bgs[1].moveTo(bgs[0].pos.x + bgWidth * 1.2, 0);
+    bgs[1].moveTo(bgs[0].pos.x + bgWidth * 1.2, bgs[0].pos.y);
 
     // jump for bg
     bgs[0].moveTo(bgs[0].pos.x, -sonic.pos.y / 10);
