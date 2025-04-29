@@ -5,7 +5,7 @@ import motoBug from "../gameObjects/motoBug";
 
 const gameScene = (sfx) => {
   if (sfx) sfx.paused = true;
-  console.log("Game Scene");
+ // console.log("Game Scene");
 
   // play bg music
   const music = k.play("ingame", { volume: 0.3, loop: true });
