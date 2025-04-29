@@ -14,7 +14,7 @@ const renderSonic = (pos) => {
       setControls() {
         k.onButtonPress("jump", () => {
           if (this.isGrounded()) {
-            console.log("jump");
+           // console.log("jump");
             this.jump();
             k.play("jump", { volume: 0.7 });
             this.play("jump");
